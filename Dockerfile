@@ -130,4 +130,6 @@ RUN groupadd -g 274 api && \
     useradd -m -G users,api ssm-user
 
 COPY --chmod=755 start_control_ssm.sh /usr/sbin/
+COPY --chmod=755 ./convert_inventory_to_sbom.sh /usr/sbin/convert_inventory_to_sbom.sh
+COPY --chmod=755 convert_inventory_to_sbom.sh /usr/sbin/
 CMD ["/usr/sbin/start_control_ssm.sh"]
